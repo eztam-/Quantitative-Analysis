@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+
+        function getDataColumn(data, col, colName){
+            var rows = [["Date",colName]];
+            for (i = 1; i <= data.index.length; i++) {
+                rows[i] = [new Date(data.index[i-1]), data.data[i-1][col]];
+            }
+            return google.visualization.arrayToDataTable(rows);
+        }
+
+      function drawChart() {
+
+        var data = $.ajax({ url: "/data", dataType: "json", async: false }).responseJSON;
+
+        // Asset growth chart
+        assetGrowthData = getDataColumn(data, 0, "Assets");
+        var options = {
+          title: 'Asset growth',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        chart.draw(assetGrowthData, options);
+
+        // Monthly growth rate chart
+        var monthGrowthData = getDataColumn(data, 1, "Growth");
+        var options = {
+          title: 'Monthly growth',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+        var monthSavingschart = new google.visualization.ColumnChart(document.getElementById('month_savings_chart'));
+        monthSavingschart.draw(monthGrowthData, options);
+
+
+        // Percentual growth chart
+        var percGrowthData = getDataColumn(data, 2, "Percentual growth");
+        var options = {
+          title: 'Monthly percentual growth',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+        var percGrowthChart = new google.visualization.ColumnChart(document.getElementById('perc_growth_chart'));
+        percGrowthChart.draw(percGrowthData, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+
+    <div id="month_savings_chart" style="width: 900px; height: 500px"></div>
+
+    <div id="perc_growth_chart" style="width: 900px; height: 500px"></div>
+  </body>
+</html>
