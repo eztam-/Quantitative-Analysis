@@ -1,0 +1,146 @@
+{% set title = 'it worked' %}
+{% extends "layout.html" %}
+{% block body %}
+
+{% raw %}
+
+    <div ng-app="erApp">
+<section  id="indicators" ng-controller="indicatorCtrl">
+    <div class="container" style="margin: 0 auto; padding: 0; width: 100%;">
+        <div class="row full-width-row ">
+            <div class="col-lg-8 col-lg-offset-2 text-center" >
+                <h2 class="section-heading" style="margin-bottom: 25px;">Browse our indicators</h2>
+            </div>
+
+            <div class="col-lg-6 text-center" style="background-color: #fff;  border-bottom: 2px solid #f05f40;" >
+              <div style="display: inline-block; background-color: #f05f40; padding: 10px; color:#fff; font-weight: bold;">
+              Indicator:
+              </div>
+              <div style=" display: inline-block;">
+      <select class="combobox" ng-model="mainSeries" ng-change="updateChart()">
+        <option ng-repeat="s in series" value="{{s.id}}">{{s.name}}</option>
+      </select>
+      </div>
+            </div>
+          <div class="col-lg-6 text-center" style="background-color: #fff; border-bottom: 2px solid #83C449;">
+      <div style="display: inline-block; background-color: #83C449; padding: 10px; color:#fff; font-weight: bold;">
+      Compare with:
+      </div>
+      <select class="combobox" ng-model="compareSeries" ng-change="updateChart()">
+        <option></option>
+        <option ng-repeat="s in series" value="{{s.id}}">{{s.name}}</option>
+      </select>
+          </div>
+
+        </div>
+        <div class="row bg-dark full-width-row" >
+           <div id="chart_div" style="width: 99%; height: 340px; padding:0; margin:10px 0 0 0;"></div>
+        </div>
+    </div>
+</section>
+
+<section id="tools" ng-controller="toolsCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">TOOLS</h2>
+                <hr class="primary">
+                First name:<br>
+        <input type="text" name="eps" ng-model="grahamNumber.eps" ng-change="calcGrahamNum()"><br>
+        First name:<br>
+        <input type="text" name="bps" ng-model="grahamNumber.bps" ng-change="calcGrahamNum()"><br>
+
+        {{grahamNumber.result}}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="api">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">REST API</h2>
+                <hr class="primary">
+                <p class="text-muted">Comming soon...</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-diamond wow bounceIn text-primary" style="visibility: visible; animation-name: bounceIn;"></i>
+                    <h3>Free</h3>
+                    <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i>
+                    <h3>Ready to Ship</h3>
+                    <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: bounceIn;"></i>
+                    <h3>Up to Date</h3>
+                    <p class="text-muted">We update dependencies to keep things fresh.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;"></i>
+                    <h3>Made with Love</h3>
+                    <p class="text-muted">You have to make your websites with love these days!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ -->
+
+
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h2 class="section-heading">Let's Get In Touch!</h2>
+                <hr class="primary">
+                <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+            </div>
+            <div class="col-lg-4 col-lg-offset-2 text-center">
+                <i class="fa fa-phone fa-3x wow bounceIn" style="visibility: visible; animation-name: bounceIn;"></i>
+                <p>+49 151 56 1212 93</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i>
+                <p><a href="mailto:info@birschl.com">info@birschl.com</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</div>
+
+
+<!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="static/js/chart.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+
+
+<script src="static/js/app.js"></script>
+
+{% endraw %}
+
+
+{% endblock %}

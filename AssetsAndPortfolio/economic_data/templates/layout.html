@@ -1,0 +1,115 @@
+<html>
+<head>
+    <title>{{ title }}</title>
+
+
+ <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{ title }}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static/font-awesome/css/font-awesome.min.css" type="text/css">
+
+
+
+    <script src="static/js/jquery.js"></script>
+
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="static/css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/creative.css" type="text/css">
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" async></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" async></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Early Reflection</a>
+            </div>
+
+
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="home" href="/">home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="indicators">Indicators</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                    <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      Data API<span class="caret"></span>
+                     </a>
+                     <ul class="dropdown-menu">
+                       <li><a href="schoolHolidays">School holidays API</a></li>
+                       <li><a href="#">Holidays API</a></li>
+                       <li><a href="#">Economics API</a></li>
+                       <li role="separator" class="divider"></li>
+                       <li><a href="#">License & Conditions</a></li>
+                       <li><a class="register" href="register">Request your free API key</a></li>
+                     </ul>
+                   </li>
+                   <li>
+                     <a lang="en" class="lang-button-de" href="/?lang=de"
+                             style="color: #888; text-transform: none; font-size: 13px; font-weight: normal;">
+                       <i class="fa fa-globe" aria-hidden="true"></i> deutsch</a>
+                    <!--
+                     <a lang="de" class="lang-button-en" href="/?lang=en"
+                             style=" color: #888; text-transform: none; font-size: 13px; font-weight: normal;">
+                       <i class="fa fa-globe" aria-hidden="true"></i> english</a>
+-->
+                   </li>
+                </ul>
+
+                </div>
+        </div>
+    </nav>
+
+    {% block body %}{% endblock %}
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.min.js" async></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/js/jquery.easing.min.js" async></script>
+    <script src="static/js/jquery.fittext.js" async></script>
+    <script src="static/js/wow.min.js" async></script>
+    <script src="static/js/creative.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Federal Funds Rate",
+    "id": "FEDFUNDS",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "name": "Unemployment rate",
+    "id": "LNS14000000",
+    "source": null,
+    "start": "2000-01-01"
+  },
+  {
+    "name": "Consumer Price Index for All Urban Consumers: All Items",
+    "id": "CPIAUCSL",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "name": "S&P 500",
+    "id": "SP500",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "name": "Gross Domestic Product",
+    "id": "GDP",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "info": "Federal Debt: Total Public Debt as Percent of Gross Domestic Product",
+    "name": "Federal Debt: Total Public Debt",
+    "id": "GFDEBTN",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "name": "Debt to GDP Ratio",
+    "id": "GFDEGDQ188S",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "name": "Crude Oil Prices (WTI)",
+    "id": "MCOILWTICO",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "info": "Corporate Profits After Tax (without IVA and CCAdj)",
+    "name": "Corporate Profits After Tax",
+    "id": "CP",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "name": "10-Year Treasury Constant Maturity Rate",
+    "id": "DGS10",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "name": "Velocity of M2 Money Stock",
+    "id": "M2V",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "name": "Real Government Consumption Expenditures and Gross Investment",
+    "id": "GCEC1",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "name": "Homeownership Rate",
+    "id": "RHORUSQ156N",
+    "source": "fred",
+    "start": "2000-01-01"
+  },
+  {
+    "name": "Inflation rate based on CPI",
+    "id": "INFLATION_M1",
+    "source": null,
+    "start": "2000-01-01"
+  }
+]
