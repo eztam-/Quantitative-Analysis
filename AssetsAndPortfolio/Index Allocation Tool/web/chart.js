@@ -2,7 +2,7 @@
 //var  dat = {"United States":31.155,"China":15.6,"Taiwan":5.765,"Korea (South)":5.76,"India":4.415,"Japan":4.11,"Brazil":4.02,"South Africa":2.815,"United Kingdom":2.705,"Russian Federation":2.045,"France":1.87,"Canada":1.775,"Switzerland":1.61,"Germany":1.545,"Thailand":1.525,"Mexico":1.26,"Australia":1.19,"Malaysia":1.1,"Indonesia":1.095,"Ireland":0.905,"Hong Kong":0.8,"Netherlands":0.605,"Philippines":0.565,"Poland":0.55,"Spain":0.495,"Qatar":0.495,"Chile":0.47,"Sweden":0.435,"United Arab Emirates":0.385,"Italy":0.37,"Denmark":0.3,"Turkey":0.295,"Singapore":0.23,"Colombia":0.23,"Peru":0.195,"Belgium":0.175,"Argentina":0.17,"Finland":0.16,"Greece":0.16,"Hungary":0.15,"European Union":0.125,"Norway":0.12,"Israel":0.1,"Egypt":0.085,"Czech Republic":0.08,"New Zealand":0.04,"Austria":0.04,"Portugal":0.02,"Pakistan":0.015,"Malta":0.0,"-":0.0};
 
 
-$.getJSON('http://localhost:5000/data.json', function(json) {
+$.getJSON('/data.json', function(json) {
 
     var dat2 = new Array();
     dat2.push(['country', 'Popularity']);

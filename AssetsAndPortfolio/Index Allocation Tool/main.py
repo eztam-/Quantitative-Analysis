@@ -5,7 +5,7 @@ import pandas as pd
 from flask import Flask
 from flask import send_from_directory
 import json as json
-
+from flask import jsonify
 
 #http://localhost:5000/index.html
 
@@ -45,7 +45,8 @@ def calc_json(files):
     }
 
     print(json.dumps(x))
-    return json.dumps(x)
+    #return json.dumps(x)
+    return jsonify(x)
 
 
 
@@ -54,6 +55,7 @@ app = Flask(__name__)
 @app.route('/data.json')
 def hello_world():
     return calc_json(files)
+# mimetype="application/json"
 
 @app.route('/<path:path>')
 def static_stuff(path):
